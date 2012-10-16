@@ -14,17 +14,14 @@ module Glean::Backend
       @redis.smembers("#{namespace}/experiment-names")
     end
 
-    def get_experiment(experiment_name)
-      data = JSON.parse(@redis.get("#{namespace}/experiments/#{experiment_name}/data")) rescue {}
-      Glean::Experiment.new(data)
+    def get_experiment_data(experiment_name)
+      JSON.parse(@redis.get("#{namespace}/experiments/#{experiment_name}/data")) rescue {}
     end
 
-    def set_experiment(experiment_name, data)
+    def set_experiment_data(experiment_name, data)
       @redis.sadd("#{namespace}/experiment-names", experiment_name)
       @redis.set("#{namespace}/experiments/#{experiment_name}/data", data.to_json)
     end
-
-
 
   end
 

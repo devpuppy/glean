@@ -14,8 +14,6 @@ class Glean
 
   end
 
-
-
 end
 
 
