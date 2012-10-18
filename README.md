@@ -4,7 +4,8 @@
 1. Extract (information) from various sources.
 2. Collect gradually and bit by bit.
 
-Glean is a gem for split testing. It runs atop [Trebuchet](https://github.com/airbnb/trebuchet) or a similar feature launcher. It makes configuring experiments consistent and reliable.
+### Glean is a gem for split testing. 
+It runs atop [Trebuchet](https://github.com/airbnb/trebuchet) or a similar feature launcher. It makes configuring experiments consistent and reliable.
 
 #### first you ...
 
@@ -34,7 +35,7 @@ case Glean["Awesome Sauce"]
   do_this when "Aces"
   do_that when "B-Team"
   do_the_other when "Control"
-  oh_you_are_not_in_the_experiment when nil
+  oh_you_are_not_part_of_this_experiment_at_all_are_you? when nil
 end
 
 ```
