@@ -19,8 +19,9 @@ class Glean::Event
 
   def bucket
     return nil if excluded?
-    return experiment.bucket_names.find do |name|
-      launcher.launch?(name)
+    return experiment.bucket_names.find do |bucket_name|
+      feature_name = experiment.bucket_feature_name(bucket_name)
+      launcher.launch?(feature_name)
     end
   end
 
