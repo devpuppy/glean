@@ -1,10 +1,9 @@
-# Glean
 **glean** *verb*
 
 1. Extract (information) from various sources.
 2. Collect gradually and bit by bit.
 
-### Glean is a gem for split testing. 
+## Glean is a gem for split testing
 It runs atop [Trebuchet](https://github.com/airbnb/trebuchet) or a similar feature launcher. It makes configuring experiments consistent and reliable.
 
 #### first you ...
