@@ -6,7 +6,7 @@
 ## Glean is a gem for split testing
 It runs atop [Trebuchet](https://github.com/airbnb/trebuchet) or a similar feature launcher. It makes configuring experiments consistent and reliable.
 
-#### first you ...
+#### first you...
 
 ```ruby
 options = {
@@ -21,7 +21,7 @@ ex.save # write to backend (Redis)
 ex.configure # set up Trebuchet features
 ```
 
-#### and then you could ...
+#### and then you could...
 
 ```xml+erb
 <% treatment = Glean['Awesome Sauce'].downcase %>
@@ -39,7 +39,7 @@ end
 
 ```
 
-#### and then you can also ...
+#### and then you can also...
 
 ```ruby
 ex = Glean::Experiment.find("Awesome Sauce")
