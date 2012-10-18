@@ -1,5 +1,6 @@
 # Glean
 **glean** *verb*
+
 1. Extract (information) from various sources.
 2. Collect gradually and bit by bit.
 
