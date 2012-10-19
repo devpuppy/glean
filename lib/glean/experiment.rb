@@ -16,6 +16,11 @@ class Glean::Experiment
     Glean::Experiment.new(data)
   end
 
+  def self.all
+    names = Glean.backend.get_experiment_names
+    names.map { |name| self.find name }
+  end
+
   def valid?
     errors.empty?
   end
